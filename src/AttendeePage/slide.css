@@ -1,0 +1,40 @@
+.mainImage {
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+    top: 0;
+}
+
+.mainDiv {
+    z-index: 1;
+    background-color: #f7f2e8;
+    border-radius: 2px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    box-shadow: 0px 2px 15px #232323;
+
+}
+.circleDark:{
+	border-radius: 50%;
+	position: relative;
+	background-color: #fefefe;
+	box-shadow: 0px 2px 15px #232323;
+}
+.mainBack {
+	height:'110%';
+    background: -moz-linear-gradient(97deg, rgba(5, 7, 8, 1) 31%, rgba(38, 38, 38, 1) 68%, rgba(48, 47, 47, 1) 79%, rgba(59, 58, 58, 1) 91%);
+    /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(9%, rgba(59, 58, 58, 1)), color-stop(21%, rgba(48, 47, 47, 1)), color-stop(32%, rgba(38, 38, 38, 1)), color-stop(69%, rgba(5, 7, 8, 1)));
+    /* safari4+,chrome */
+    background: -webkit-linear-gradient(97deg, rgba(5, 7, 8, 1) 31%, rgba(38, 38, 38, 1) 68%, rgba(48, 47, 47, 1) 79%, rgba(59, 58, 58, 1) 91%);
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(97deg, rgba(5, 7, 8, 1) 31%, rgba(38, 38, 38, 1) 68%, rgba(48, 47, 47, 1) 79%, rgba(59, 58, 58, 1) 91%);
+    /* opera 11.10+ */
+    background: -ms-linear-gradient(97deg, rgba(5, 7, 8, 1) 31%, rgba(38, 38, 38, 1) 68%, rgba(48, 47, 47, 1) 79%, rgba(59, 58, 58, 1) 91%);
+    /* ie10+ */
+    background: linear-gradient(353deg, rgba(5, 7, 8, 1) 31%, rgba(38, 38, 38, 1) 68%, rgba(48, 47, 47, 1) 79%, rgba(59, 58, 58, 1) 91%);
+    /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3B3A3A', endColorstr='#050708', GradientType=0);
+    /* ie6-9 */
+}
