@@ -14,7 +14,7 @@ export default class AttendeePage extends Component {
         }
 		return (
 			 <div>
-                <Slide imgLink={'./assets/slide1.jpg'}/>
+                <Slide {...this.props} params={this.props.match.params} imgLink={'./assets/slide1.jpg'}/>
              </div>
              
 		);

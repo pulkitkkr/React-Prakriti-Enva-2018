@@ -31,7 +31,7 @@ export default class IndividualCard extends Component {
 			  <div style={{marginBottom:(this.state.width/12)+14,minHeight:(this.state.height-100), position:'relative',top:-(this.state.height/3)+(this.state.width/12)+40}} className='mainDiv'>
                      <center>
                      <div className='circleDark'  style={{position:'relative',top:-this.state.width/12,borderRadius:this.state.height/1.2,backgroundColor:'#000000',display:'inline-block',  boxShadow: "1px 0.2px 15px #232323"}}>
-                         <img width={parseInt(this.state.width/5)}  src={'./assets/logo.png'}></img>
+                         <img width={parseInt(this.state.width/5)}  src={'./../assets/logo.png'}></img>
                       </div>
                     </center>
                     <h2 style={{textAlign:'center',fontWeight:'300', zIndex: 2,position:'relative',top:-this.state.width/12}}>

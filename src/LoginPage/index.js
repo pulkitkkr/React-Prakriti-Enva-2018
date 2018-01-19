@@ -8,10 +8,10 @@ import {Animated} from "react-animated-css";
 
 export default class LoginPage extends Component {
 	OpenOrganiser = ()=>{
-		 document.location.href = '/#/organiser/';
+		 document.location.href = '/organiser';
 	};
 	OpenAttendee = ()=>{
-		 document.location.href = '/#/attendee/';
+		 document.location.href = '/attendee';
 	}
 	render() {
 		return (
@@ -21,7 +21,8 @@ export default class LoginPage extends Component {
 				 <Animated animationInDelay={0.30} animationIn="bounceIn" animationOut="fadeOut" isVisible={true}>
  
 				 <center >
-				 	 <img  style={Styles.imgStyle} src='./assets/prakriti_logo.png' width={'50%'}/>
+				 	 <img  style={Styles.imgStyle} src='./assets/prakriti_logo.png' width={'50%'}/><br/>
+				 	 <img  style={Styles.imgStyle} src='./assets/zebLogo.png' width={'50%'}/>
 				 	 <h3 style={Styles.h3Style}>Are you an ?</h3>
 				 	 <div style={Styles.selectionDiv}>
 				 	 	  
@@ -80,7 +81,7 @@ const Styles={
 	},
 	imgStyle:{ 
 		marginTop: 45,
-		maxWidth: 260
+		maxWidth: 150
 	},
 	h3Style:{
 		color:'#fff',

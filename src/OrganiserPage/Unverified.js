@@ -4,8 +4,64 @@ import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Animated} from "react-animated-css";
-
+import EventsData from './../IndividualEvent/eventData'
 export default class Unverified extends Component {
+	constructor(props){
+		super(props);
+		this.state={
+			pass:'',
+			eventData:{}
+		}
+	}
+	isNumeric=(n)=>{ 
+      return !isNaN(parseFloat(n)) && isFinite(n); 
+	};
+	passwordVerifier=()=>{
+		if(this.state.pass.length>7){
+			var string='';
+			var index =0;
+			while(index!==this.state.pass.length){
+				if(!this.isNumeric(this.state.pass[index]))
+					string +=this.state.pass[index];
+				index++;
+			}
+			if(EventsData[string]){
+				this.setState({eventData:EventsData[string]},()=>this.props.changeAuthorisationState(true,this.state.eventData,string));
+			}
+			else if(string=='sportsrumble'){
+				this.setState({eventData:EventsData[string]},()=>this.props.changeAuthorisationState(true,this.state.eventData,string));
+			}
+			else{
+					this.setState({eventData:{}});
+					alert('You Entered a wrong Password');
+			}
+		}
+		else{
+			this.setState({eventData:{}});
+			alert('Please Check the Password you\'ve Entered');
+			 
+		}
+	};
+	submitPassword =()=>{
+		this.passwordVerifier();
+	}
+	/*
+	Passwords:
+	91showdown88
+	192wordyrinth9a
+	greenwizard90
+	199mysteryroom76
+	1feetofire123
+	69foodieAkhaada7
+	0GunNRoses1
+	34MinuteToWinIt123
+	12SportsRumble34
+	11BattleOfBands11
+	56TreasureHunt65
+	43Spartacus34
+	114LivePawn5
+
+	*/
 	render() {
 		return (
 			<div>
@@ -21,9 +77,9 @@ export default class Unverified extends Component {
 							<h4 style={Styles.h4Style}>Please Enter the Authorisation Password, Provided by your mentor</h4>
 							<img src={'./assets/lock.png'} style={Styles.imgStyle} />
 							<br/>
-							<TextField floatingLabelStyle={Styles.floatingLabelStyle} floatingLabelText="Enter Password"  hintText="Please Enter Password"    hintStyle={Styles.TextFieldStyle}  />
+							<TextField onChange={(event)=>{this.setState({pass:event.target.value})}} floatingLabelStyle={Styles.floatingLabelStyle} floatingLabelText="Enter Password"  hintText="Please Enter Password"    hintStyle={Styles.TextFieldStyle}  />
 							<br/><br/>
-							<RaisedButton onClick={()=>this.props.changeAuthorisationState(true)} labelColor={'#fff'} backgroundColor={'#01807B'} label="Verify" fullWidth={true} />
+							<RaisedButton onClick={()=>this.submitPassword()} labelColor={'#fff'} backgroundColor={'#01807B'} label="Verify" fullWidth={true} />
 						</center>
 					</div>
 				</center>
